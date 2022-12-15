@@ -15,10 +15,6 @@ function App() {
           <Route path="/add-post" element={<AddPost />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Registration />} />
-
-          {/*<AddPost />*/}
-          {/*<Login />*/}
-          {/*<Registration />*/}
         </Routes>
       </Container>
     </>
