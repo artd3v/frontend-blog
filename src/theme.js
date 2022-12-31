@@ -4,13 +4,13 @@ export const theme = createTheme({
   shadows: ["none"],
   palette: {
     primary: {
-      main: "#4361ee",
+      main: "#000",
     },
   },
   typography: {
     button: {
       textTransform: "none",
-      fontWeight: 400,
+      fontWeight: 600,
     },
   },
 });

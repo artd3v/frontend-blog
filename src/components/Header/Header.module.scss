@@ -22,16 +22,21 @@
   text-decoration: none;
 
   &:hover {
-    background-color: #4361ee;
+    background-color: #747474;
   }
 }
 
 .buttons {
   button {
     margin-left: 10px;
+    &:hover {
+      background-color: #747474;
+    }
   }
-
+  
   a {
     text-decoration: none;
   }
+
+  
 }

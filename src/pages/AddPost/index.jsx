@@ -45,7 +45,6 @@ export const AddPost = () => {
 		return <Navigate to="/" />;
 	}
 
-	// console.log({ title, tags, value }); Проверочка сохранения в состояние
 
 	return (
 		<Paper style={{ padding: 30 }}>
