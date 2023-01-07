@@ -29,10 +29,10 @@ export const Home = () => {
 				<Tab label="Популярные" />
 			</Tabs>
 			<Grid container spacing={2}>
-				<Grid xs={4} item>
+				<Grid xs={3} item>
 					<TagsBlock items={tags.items} isLoading={isTagsLoading} />
 				</Grid>
-				<Grid xs={8} item>
+				<Grid xs={9} item>
 					{(isPostsLoading ? [ ...Array(5)] : posts.items).map((obj, index) =>
 						isPostsLoading ? (
 							<Post key={index} isLoading={true} />
@@ -54,4 +54,4 @@ export const Home = () => {
 			</Grid>
 		</>
 	);
-	};
+};

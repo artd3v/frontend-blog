@@ -16,12 +16,12 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<>
 		<ThemeProvider theme={theme}>
-		<BrowserRouter>
-			<Provider store={store}>
-			<CssBaseline />
-			<App />
-			</Provider>
-		</BrowserRouter>
+			<BrowserRouter>
+				<Provider store={store}>
+					<CssBaseline />
+					<App />
+				</Provider>
+			</BrowserRouter>
 		</ThemeProvider>
 	</>
 );

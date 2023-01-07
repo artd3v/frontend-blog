@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import DehazeRoundedIcon from '@mui/icons-material/DehazeRounded';
+import HomeIcon from '@mui/icons-material/Home';
+import LogoutIcon from '@mui/icons-material/Logout';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import LoginTwoToneIcon from '@mui/icons-material/LoginTwoTone';
+import PostAddIcon from '@mui/icons-material/PostAdd';
+
 
 import styles from './Header.module.scss';
 import Container from '@mui/material/Container';
@@ -23,30 +28,40 @@ export const Header = () => {
 		<div className={styles.root}>
 		<Container maxWidth="lg">
 			<div className={styles.inner}>
-			<Link className={styles.logo} to="/">
-				<div>LOGO</div>
-			</Link>
-			<div className={styles.buttons}>
-				{isAuth ? (
-					<>
-						<Link to="/add-post">
-							<Button variant="contained">Написать статью</Button>
-						</Link>
-						<Button onClick={onClickLogout} variant="contained">
-							Выйти
-						</Button>
-					</>
-				) : (
-					<>
-						<Link to="/login">
-							<Button variant="outlined">Войти</Button>
-						</Link>
-						<Link to="/register">
-							<Button variant="contained">Создать аккаунт</Button>
-						</Link>
-					</>
-				)}
-			</div>
+				<Link className={styles.logo} to="/">
+					<Button variant="contained">
+						<HomeIcon />
+					</Button>
+				</Link>
+				<div className={styles.buttons}>
+					{isAuth ? (
+						<>
+							<Link to="/add-post">
+								<Button variant="contained">
+									<PostAddIcon />
+								</Button>
+							</Link>
+							<Button onClick={onClickLogout} variant="contained" >
+								<LogoutIcon />
+							</Button>
+						</>
+					) : (
+						<>
+							<Link to="/login">
+								<Button variant="contained" >
+									<LoginTwoToneIcon />
+									Вход
+								</Button>
+							</Link>
+							<Link to="/register">
+								<Button variant="contained">
+									<PersonAddIcon />
+									Регистрация
+								</Button>
+							</Link>
+						</>
+					)}
+				</div>
 			</div>
 		</Container>
 		</div>
