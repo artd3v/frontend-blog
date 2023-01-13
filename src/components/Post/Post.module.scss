@@ -1,27 +1,27 @@
-$blue: #4361ee;
+
 $gray: #747474;
 
 .root {
-  background-color: #fff;
-  border: 1px solid #dedede;
+  background-color: rgba(156, 153, 153, 0.418);
+  border: 2px solid #dedede;
   border-radius: 6px;
   overflow: hidden;
   margin-bottom: 15px;
   position: relative;
 
   &:hover {
-    border: 1px solid $gray;
+    border: 2px solid $gray;
     box-shadow: 0 0 0 1px $gray;
 
     .editButtons {
-      opacity: 1;
+      opacity: 0.9;
     }
   }
 
   &Full {
     &:hover {
-      background-color: #fff;
-      border: 1px solid #dedede;
+      background-color: rgba(77, 76, 76, 0.884);
+      border: 2px solid #dedede;
       box-shadow: none;
     }
   }
@@ -46,7 +46,7 @@ $gray: #747474;
   margin: 30px 0 50px;
 
   p {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 36px;
   }
 }
@@ -58,13 +58,14 @@ $gray: #747474;
 .title {
   font-size: 28px;
   margin: 0;
+  color: #06090abb;
 
   a {
     text-decoration: none;
-    color: #000;
+    color: #06090abb;
 
     &:hover {
-      color: $gray;
+      color: #1d1c1cb2;
     }
   }
 
@@ -91,7 +92,7 @@ $gray: #747474;
 
     a {
       text-decoration: none;
-      color: #000;
+      color: rgb(206, 205, 205);
     }
   }
 }
@@ -109,7 +110,7 @@ $gray: #747474;
     opacity: 0.5;
 
     svg {
-      font-size: 18px;
+      font-size: 25px;
       margin-right: 5px;
     }
   }
@@ -152,8 +153,9 @@ $gray: #747474;
   position: absolute;
   right: 15px;
   top: 15px;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgb(54, 54, 54);
   border-radius: 10px;
   opacity: 0;
   transition: all 0.15s ease-in-out;
 }
+

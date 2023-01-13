@@ -12,6 +12,7 @@ import styles from './Post.module.scss';
 import { UserInfo } from '../UserInfo';
 import { PostSkeleton } from './Skeleton';
 import { fetchRemovePost } from '../../redux/slices/posts';
+import { theme } from '../../theme';
 
 export const Post = ({
 	_id,
@@ -43,7 +44,7 @@ export const Post = ({
 			{isEditable && (
 				<div className={styles.editButtons}>
 				<Link to={`/posts/${_id}/edit`}>
-					<IconButton color="primary">
+					<IconButton color="secondary">
 						<EditIcon />
 					</IconButton>
 				</Link>
@@ -79,8 +80,7 @@ export const Post = ({
 						<span>{viewsCount}</span>
 					</li>
 					<li>
-						<CommentIcon />
-						<span>{commentsCount}</span>
+						
 					</li>
 				</ul>
 				</div>
