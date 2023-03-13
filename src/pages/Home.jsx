@@ -29,11 +29,14 @@ export const Home = () => {
 				<Tab label="Популярные" />
 			</Tabs>
 
+
+
+
 			<Grid container spacing={2}>
 				<Grid xs={3} item>
 					<TagsBlock items={tags.items} isLoading={isTagsLoading} />
 				</Grid>
-				<Grid xs={9} item>
+				<Grid xs={4} item>
 					{(isPostsLoading ? [ ...Array(5)] : posts.items).map((obj, index) =>
 						isPostsLoading ? (
 							<Post key={index} isLoading={true} />
@@ -41,7 +44,7 @@ export const Home = () => {
 							<Post
 								_id={obj._id}
 								title={obj.title}
-								imageUrl={ obj.imageUrl ? `http://18.193.174.83:4444${obj.imageUrl}` : '' }
+								imageUrl={ obj.imageUrl ? `http://localhost:4444${obj.imageUrl}` : '' }
 								user={obj.user}
 								createdAt={obj.createdAt}
 								viewsCount={obj.viewsCount}
@@ -52,8 +55,10 @@ export const Home = () => {
 						),
 					)}
 				</Grid>
+				
 			</Grid>
 			
+
 		</>
 	);
 };

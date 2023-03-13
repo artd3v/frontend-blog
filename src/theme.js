@@ -3,7 +3,7 @@ import { createTheme } from "@mui/material/styles";
 export const theme = createTheme({
 	shadows: ["none"],
 	palette: {
-		mode: 'dark',
+		mode: 'dark'
 	},
 	typography: {
 		button: {
