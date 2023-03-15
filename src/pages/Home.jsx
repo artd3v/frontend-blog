@@ -25,8 +25,12 @@ export const Home = () => {
 	return (
 		<>
 			<Tabs style={{ marginBottom: 15 }} value={0} aria-label="basic tabs example">
-				<Tab label="Новые" />
-				<Tab label="Популярные" />
+				<Tab label="Все" />
+				<Tab label="cat1" />
+				<Tab label="cat2" />
+				<Tab label="cat3" />
+				<Tab label="cat4" />
+				<Tab label="cat5" />
 			</Tabs>
 
 
@@ -36,7 +40,7 @@ export const Home = () => {
 				<Grid xs={3} item>
 					<TagsBlock items={tags.items} isLoading={isTagsLoading} />
 				</Grid>
-				<Grid xs={4} item>
+				<Grid xs={9} item>
 					{(isPostsLoading ? [ ...Array(5)] : posts.items).map((obj, index) =>
 						isPostsLoading ? (
 							<Post key={index} isLoading={true} />
